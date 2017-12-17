@@ -1,0 +1,22 @@
+{
+  "name": "bamazon-week12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rey-adam/Bamazon-Week12.git"
+  },
+  "author": "Rey Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rey-adam/Bamazon-Week12/issues"
+  },
+  "homepage": "https://github.com/rey-adam/Bamazon-Week12#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
