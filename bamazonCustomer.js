@@ -17,8 +17,31 @@ var connection = mysql.createConnection({
 connection.connect(function(err){
     console.log("Connected as id: " + connection.threadId);
 })
-// mysql connection working 
+// mysqly connection working 
 // ===========================================================
+
+var displayTable = function(){
+  connection.query("SELECT * FROM products", function(err, res) {
+    if(err) throw err;
+
+    // draw your 
+      var productsTable = new Table({
+        head: ['Item ID', 'Product Name', 'Price', 'Stock Quantity'],
+        colWidths: [20, 50, 70, 20]
+  
+      })
+
+      console.log(res);
+  });
+}
+
+displayTable();
+
+
+
+
+
+
 
 // functions which prompts the user for thier orders 
 // var start = function (){
@@ -37,6 +60,7 @@ connection.connect(function(err){
 //         connection.query ("INSERT INTO products SET ?",
 // 
 
+
 // psuedo code 
 // display the PRODCUTS TABLE on command line
 // ask the user what item they would like to purchase and the quantity 
@@ -45,4 +69,3 @@ connection.connect(function(err){
 // However, if your store does have enough of the product, you should fulfill the customer's order.
 // This means updating the SQL database to reflect the remaining quantity.
 // Once the update goes through, show the customer the total cost of their purchase.
-
